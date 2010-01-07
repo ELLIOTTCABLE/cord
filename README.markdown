@@ -19,19 +19,18 @@ Let’s look at some examples. A basic `yarn` just consists of a plain `String`,
 and some sort of styling:
 
     puts( yarn.beget({foreground: 'green'}, "Hello, world!") );
-
-Not too difficult, right? That looks like this:
 ![Basic example of a `yarn`][basic]
 
-Let’s move on to nesting `yarns`, for more advanced functionality:
+Not too difficult, right? Let’s move on to nesting `yarns`, for more advanced
+functionality:
 
     puts( yarn.beget({foreground: 'red'}, "Merry",
             yarn.beget({foreground: 'green'}, "Christmas"), "!") );
+![A nested `yarn`][nested]
 
 That, fairly obviously, creates a red `yarn`, containing another (green)
-`yarn` as a child element. It looks like this: ![A nested `yarn`][nested]
-
-Finally, let’s examine a fairly complex multiply-nested `yarn`:
+`yarn` as a child element. Finally, let’s examine a fairly complex multiply-
+nested `yarn`:
 
     var y  = yarn.beget(), y2 = yarn.beget(),
         y3 = yarn.beget(), y4 = yarn.beget();
@@ -45,8 +44,6 @@ Finally, let’s examine a fairly complex multiply-nested `yarn`:
     y3.style({ foreground: 'green' });    y4.style({ underline: 'single' });
     
     process.stdio.write('['+y.toString()+']' + '\n');
-
-Let’s peek at the end result, and then break it down:
 ![Quite a complex `yarn`][complex]
 
 There’s several important things to notice about how that ended up getting
