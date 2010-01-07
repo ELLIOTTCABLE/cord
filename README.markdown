@@ -63,6 +63,6 @@ displayed:
 These are the problems with previous, simpler ANSI printers that I was trying
 to solve with Yarn. I believe it achieves these goals wonderfully! ^_^
 
-  [basic]: http://github.com/elliottcable/Yarn/blob/Master/examples/basic.png
-  [nested]: http://github.com/elliottcable/Yarn/blob/Master/examples/nested.png
-  [complex]: http://github.com/elliottcable/Yarn/blob/Master/examples/complex.png
+  [basic]: http://github.com/elliottcable/Yarn/raw/Master/examples/basic.png
+  [nested]: http://github.com/elliottcable/Yarn/raw/Master/examples/nested.png
+  [complex]: http://github.com/elliottcable/Yarn/raw/Master/examples/complex.png
