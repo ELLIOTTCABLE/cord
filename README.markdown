@@ -18,14 +18,18 @@ The stylings on nested `yarn`s intelligently stack when printed.
 Let’s look at some examples. A basic `yarn` just consists of a plain `String`,
 and some sort of styling:
 
-    puts( yarn.beget({foreground: 'green'}, "Hello, world!") );
+    sys.puts( yarn.beget({ styles : {foreground: 'green'},
+                         elements : ["Hello, world!"] }) );
 ![Basic example of a `yarn`][basic]
 
 Not too difficult, right? Let’s move on to nesting `yarns`, for more advanced
 functionality:
 
-    puts( yarn.beget({foreground: 'red'}, "Merry",
-            yarn.beget({foreground: 'green'}, "Christmas"), "!") );
+    sys.puts( yarn.beget({ styles : {foreground: 'red'},
+                         elements : ["Merry ",
+                                     yarn.beget({ styles : {foreground: 'green'},
+                                                elements : ["Christmas"] }),
+                                     "!"] }) );
 ![A nested `yarn`][nested]
 
 That, fairly obviously, creates a red `yarn`, containing another (green)
@@ -43,7 +47,7 @@ nested `yarn`:
     y .style({ foreground: 'red'   });    y2.style({ underline: 'single' });
     y3.style({ foreground: 'green' });    y4.style({ underline: 'single' });
     
-    process.stdio.write('['+y.toString()+']' + '\n');
+    sys.puts('['+y.toString()+']');
 ![Quite a complex `yarn`][complex]
 
 There’s several important things to notice about how that ended up getting
