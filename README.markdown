@@ -59,6 +59,10 @@ displayed:
   underline had not yet been reached
 - When the end of the green `yarn` had been reached, the red colour was
   restored (quite a difficult task, using ANSI codes, if I do say so myself!)
+- At the culmination of the entire `yarn`, no wayward styles are left over
+  (i.e. the closing bracket is plain white, with no styling)… this is
+  important, as a stray code could screw up the display of everything else in
+  the user’s Terminal
 
 These are the problems with previous, simpler ANSI printers that I was trying
 to solve with Yarn. I believe it achieves these goals wonderfully! ^_^
