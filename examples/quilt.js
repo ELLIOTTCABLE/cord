@@ -1,31 +1,29 @@
-from.package('poopy.js').wait();
-
-var yarn = from.relative('../lib/Yarn.js').wait(),
+var cord = require('../lib/cord.js'),
      sys = require("sys");
 
 var bob, theresa, jim, quilt;
-bob = yarn.beget({ elements : [
-  yarn.beget({ elements : ['Mr. '] }),
-  yarn.beget({   labels : ['name', 'entry'],
+bob = new cord.constructor({ elements : [
+  new cord.constructor({ elements : ['Mr. '] }),
+  new cord.constructor({   labels : ['name', 'entry'],
                elements : ['Bob Hanley'] }),
   ' ',
-  yarn.beget({   labels : ['score', 'entry'],
-               elements : ['(','2',')'] })
+  new cord.constructor({   labels : ['score', 'entry'],
+                         elements : ['(','2',')'] })
 ] }),
-theresa = yarn.beget({ elements : [
+theresa = new cord.constructor({ elements : [
   'Ms. ',
-  yarn.beget({   labels : ['name', 'entry'],
-               elements : ['Theresa Clark'] }),
+  new cord.constructor({   labels : ['name', 'entry'],
+                         elements : ['Theresa Clark'] }),
   ' ',
-  yarn.beget({   labels : ['score', 'entry'],
-               elements : ['(','8',')'] })
+  new cord.constructor({   labels : ['score', 'entry'],
+                         elements : ['(','8',')'] })
 ] }),
-jim = yarn.beget({ elements : [
-  yarn.beget({   labels : ['name', 'entry'],
-               elements : ['Jim Chu'] }),
+jim = new cord.constructor({ elements : [
+  new cord.constructor({   labels : ['name', 'entry'],
+                         elements : ['Jim Chu'] }),
   ' ',
-  yarn.beget({   labels : ['score', 'entry'],
-               elements : ['(','0',')'] })
+  new cord.constructor({   labels : ['score', 'entry'],
+                         elements : ['(','0',')'] })
 ] });
 
 bob.label('important');
@@ -38,5 +36,5 @@ quilt = {
   important: {underline: 'single'}
 }
 
-sys.puts( yarn.beget({ elements : [bob, ', ', theresa, ', ', jim] })
+sys.puts( new cord.constructor({ elements : [bob, ', ', theresa, ', ', jim] })
             .toString(quilt) );

@@ -1,7 +1,5 @@
-from.package('poopy.js').wait();
-
-var yarn = from.relative('../lib/Yarn.js').wait(),
+var cord = require('../lib/cord.js'),
      sys = require("sys");
 
-sys.puts( yarn.beget({ styles : {foreground: 'green'},
+sys.puts( new cord.constructor({ styles : {foreground: 'green'},
                      elements : ["Hello, world!"] }) );
