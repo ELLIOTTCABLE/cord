@@ -1,0 +1,10 @@
+{     "author" : "elliottcable (http://ell.io/tt)"
+   
+,       "name" : "cord"
+,    "version" : "0.9.9"
+,    "license" : "MIT"
+, "repository" :{"type":"git", "url":"git://github.com/ELLIOTTCABLE/cord.git"}
+   
+,       "main" : "lib/cord.js"
+   
+,    "engines" :{"node":"~0.10.10"} }
