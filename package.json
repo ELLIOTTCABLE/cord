@@ -7,4 +7,5 @@
    
 ,       "main" : "lib/cord.js"
    
-,    "engines" :{"node":"~0.10.10"} }
+,       "engines" :{"node":"~0.10.10"}
+,  "dependencies" :{"lodash":"~1.2.1"} }
