@@ -1,8 +1,8 @@
-Yarn
+cord
 ====
-A `yarn` is a sexy, styled JavaScript `String` that can print itself prettily.
+A `cord` is a sexy, styled JavaScript `String` that can print itself prettily.
 
-This project was forked off of [Percival][]
+This project was forked off of [Percival][].
 
 Currently, this involves intelligently handling ANSI escape codes for printing
 styled strings to terminals; eventually, this should also print identically to
@@ -12,61 +12,61 @@ HTML source that can be injected into a document.
 
 Usage
 =====
-`yarn`s are created with plain `String`s and other `yarn`s as child elements.
-The stylings on nested `yarn`s intelligently stack when printed.
+`cord`s are created with plain `String`s and other `cord`s as child elements.
+The stylings on nested `cord`s intelligently stack when printed.
 
-Let’s look at some examples. A basic `yarn` just consists of a plain `String`,
+Let’s look at some examples. A basic `cord` just consists of a plain `String`,
 and some sort of styling:
 
-    sys.puts( yarn.beget({ styles : {foreground: 'green'},
+    sys.puts( cord.beget({ styles : {foreground: 'green'},
                          elements : ["Hello, world!"] }) );
-![Basic example of a `yarn`][basic]
+![Basic example of a `cord`][basic]
 
-Not too difficult, right? Let’s move on to nesting `yarns`, for more advanced
+Not too difficult, right? Let’s move on to nesting `cord`, for more advanced
 functionality:
 
-    sys.puts( yarn.beget({ styles : {foreground: 'red'},
+    sys.puts( cord.beget({ styles : {foreground: 'red'},
                          elements : ["Merry ",
-                                     yarn.beget({ styles : {foreground: 'green'},
+                                     cord.beget({ styles : {foreground: 'green'},
                                                 elements : ["Christmas"] }),
                                      "!"] }) );
-![A nested `yarn`][nested]
+![A nested `cord`][nested]
 
-That, fairly obviously, creates a red `yarn`, containing another (green)
-`yarn` as a child element. Finally, let’s examine a fairly complex multiply-
-nested `yarn`:
+That, fairly obviously, creates a red `cord`, containing another (green)
+`cord` as a child element. Finally, let’s examine a fairly complex multiply-
+nested `cord`:
 
-    var y  = yarn.beget(), y2 = yarn.beget(),
-        y3 = yarn.beget(), y4 = yarn.beget();
+    var c  = cord.beget(), c2 = cord.beget(),
+        c3 = cord.beget(), c4 = cord.beget();
     
-    y .elements.push('foo ', y2, ' grault');
-    y2.elements.push('bar ', y3, ' corge');
-    y3.elements.push('baz ', y4, ' quux');
-    y4.elements.push(      'qux'      );
+    c .elements.push('foo ', c2, ' grault');
+    c2.elements.push('bar ', c3, ' corge');
+    c3.elements.push('baz ', c4, ' quux');
+    c4.elements.push(      'qux'      );
     
-    y .style({ foreground: 'red'   });    y2.style({ underline: 'single' });
-    y3.style({ foreground: 'green' });    y4.style({ underline: 'single' });
+    c .style({ foreground: 'red'   });    c2.style({ underline: 'single' });
+    c3.style({ foreground: 'green' });    c4.style({ underline: 'single' });
     
-    sys.puts('['+y.toString()+']');
-![Quite a complex `yarn`][complex]
+    sys.puts('['+c.toString()+']');
+![Quite a complex `cord`][complex]
 
 There’s several important things to notice about how that ended up getting
 displayed:
 
 - The underline effect continued throughout the sub-nested styled strings
 - The end of the nested, underlined element did *not* cause the end of the
-  underline, it was already in effect, and the end of the outer `yarn` with an
+  underline, it was already in effect, and the end of the outer `cord` with an
   underline had not yet been reached
-- When the end of the green `yarn` had been reached, the red colour was
+- When the end of the green `cord` had been reached, the red colour was
   restored (quite a difficult task, using ANSI codes, if I do say so myself!)
-- At the culmination of the entire `yarn`, no wayward styles are left over
+- At the culmination of the entire `cord`, no wayward styles are left over
   (i.e. the closing bracket is plain white, with no styling)… this is
   important, as a stray code could screw up the display of everything else in
   the user’s Terminal
 
 These are the problems with previous, simpler ANSI printers that I was trying
-to solve with Yarn. I believe it achieves these goals wonderfully! ^_^
+to solve with cord. I believe it achieves these goals wonderfully! ^_^
 
-  [basic]: http://github.com/elliottcable/Yarn/raw/Master/examples/basic.png
-  [nested]: http://github.com/elliottcable/Yarn/raw/Master/examples/nested.png
-  [complex]: http://github.com/elliottcable/Yarn/raw/Master/examples/complex.png
+  [basic]: http://github.com/elliottcable/cord/raw/Master/examples/basic.png
+  [nested]: http://github.com/elliottcable/cord/raw/Master/examples/nested.png
+  [complex]: http://github.com/elliottcable/cord/raw/Master/examples/complex.png
