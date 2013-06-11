@@ -1,7 +1,7 @@
-{     "author" : "elliottcable (http://ell.io/tt)"
+{     "author" : "ELLIOTTCABLE (http://ell.io/tt)"
    
 ,       "name" : "cord"
-,    "version" : "0.9.9"
+,    "version" : "1.0.0"
 ,    "license" : "MIT"
 , "repository" :{"type":"git", "url":"git://github.com/ELLIOTTCABLE/cord.git"}
    
