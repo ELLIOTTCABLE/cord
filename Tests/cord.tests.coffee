@@ -14,6 +14,12 @@ describe 'Cord', ->
    
    describe '(aping a String)', ->
       
+      it.skip 'constructs without `new`', ->
+         expect(-> Cord 'foo').to.not.throwError()
+         expect(   Cord 'foo').to.be.a Cord
+         expect(-> Cord()).to.not.throwError()
+         expect(   Cord()).to.be.a Cord
+      
       it 'exposes toString()', ->
          cord = new Cord
          expect(   cord).to.have.property 'toString'
