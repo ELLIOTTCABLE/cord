@@ -9,6 +9,6 @@ return module.exports = (function(){
    cord.constructor = Cord
    
    cord.toString = function(){
-      return this.content }
+      return this.content.toString() }
    
    return Cord })()

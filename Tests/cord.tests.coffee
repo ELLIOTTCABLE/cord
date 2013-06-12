@@ -20,6 +20,9 @@ describe 'Cord', ->
          expect(-> Cord()).to.not.throwError()
          expect(   Cord()).to.be.a Cord
       
+      it 'constructs arbitrary arguments via their toString()', ->
+         expect( (new Cord {}) .toString()).to.be '[object Object]'
+      
       it 'exposes toString()', ->
          cord = new Cord
          expect(   cord).to.have.property 'toString'
