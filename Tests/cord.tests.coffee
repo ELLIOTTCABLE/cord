@@ -17,7 +17,7 @@ describe 'Cord', ->
       it 'exposes toString()', ->
          cord = new Cord
          expect(   cord).to.have.property 'toString'
-         expect(-> cord.toString()).to.not.throwError
+         expect(-> cord.toString()).to.not.throwError()
          expect(   cord.toString()).to.be.a 'string'
       
       it "toString()'s to a plain String, by default", ->
