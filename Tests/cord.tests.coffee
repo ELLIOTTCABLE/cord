@@ -13,7 +13,7 @@ describe 'Cord', ->
    describe '(aping a String)', ->
       
       it 'exposes toString()', ->
-         cord = new Cord 'foo'
+         cord = new Cord
          expect(   cord).to.have.property 'toString'
          expect(-> cord.toString()).to.not.throwError
          expect(   cord.toString()).to.be.a 'string'
