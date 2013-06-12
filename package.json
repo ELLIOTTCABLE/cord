@@ -5,7 +5,9 @@
 ,    "license" : "MIT"
 , "repository" :{"type":"git", "url":"git://github.com/ELLIOTTCABLE/cord.git"}
    
-,       "main" : "lib/cord.js"
+,       "main" : "Library/cord.js"
+
+,    "scripts" :{"test": "mocha --reporter spec --compilers coffee:coffee-script Tests/*.coffee"}
    
 ,       "engines" :{"node":"~0.10.10"}
 ,  "dependencies" :{"lodash":"~1.2.1"} }
