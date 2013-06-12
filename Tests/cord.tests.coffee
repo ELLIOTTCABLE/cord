@@ -9,6 +9,8 @@ describe 'Cord', ->
    
    it 'has a circular constructor-reference', ->
       expect((new Cord).constructor).to.be Cord
+   it 'has a named constructor', ->
+      expect(Cord.name).to.be 'Cord'
    
    describe '(aping a String)', ->
       

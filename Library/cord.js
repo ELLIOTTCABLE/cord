@@ -2,7 +2,7 @@ return module.exports = (function(){
    var Cord, cord
    
    // TODO: `constructify()` this
-   Cord = function(content){
+   Cord = function Cord(content){
       this.content = content || '' }
    
    cord = Cord.prototype
