@@ -21,7 +21,21 @@ describe 'Cord', ->
          expect(   Cord()).to.be.a Cord
       
       it 'constructs arbitrary arguments via their toString()', ->
-         expect( (new Cord {}) .toString()).to.be '[object Object]'
+         toCord   = (it) -> new Cord(it)   .toString()
+         toString = (it) -> new String(it) .toString()
+         
+         expect(toCord {}).to.be toString {}
+         expect(toCord {}).to.be '[object Object]'
+         
+         expect(toCord 42).to.be toString 42
+         expect(toCord 42).to.be '42'
+         
+         expect(toCord [1, 2, 3]).to.be toString [1, 2, 3]
+         expect(toCord [1, 2, 3]).to.be '1,2,3'
+         
+         thingie = { toString: -> return 'whee' }
+         expect(toCord thingie).to.be toString thingie
+         expect(toCord thingie).to.be 'whee'
       
       it 'exposes toString()', ->
          cord = new Cord
