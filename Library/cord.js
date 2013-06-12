@@ -8,6 +8,7 @@ return module.exports = (function(){
    cord = Cord.prototype
    cord.constructor = Cord
    
+   cord.valueOf =
    cord.toString = function(){
       return this.content.toString() }
    
