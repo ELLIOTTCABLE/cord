@@ -6,6 +6,7 @@ return module.exports = (function(){
       this.content = content }
    
    cord = Cord.prototype
+   cord.constructor = Cord
    
    cord.toString = function(){
       return this.content }

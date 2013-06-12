@@ -7,6 +7,9 @@ describe 'Cord', ->
       expect(Cord).to.be.ok()
       expect(Cord).to.be.a 'function'
    
+   it 'has a circular constructor-reference', ->
+      expect((new Cord).constructor).to.be Cord
+   
    describe '(aping a String)', ->
       
       it 'exposes toString()', ->
