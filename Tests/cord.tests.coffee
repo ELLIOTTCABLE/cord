@@ -1,6 +1,20 @@
 expect = require 'expect.js'
 Cord = require '../'
 
-it 'exists', ->
-   expect(Cord).to.be.ok()
-   expect(Cord).to.be.a 'function'
+describe 'Cord', ->
+   
+   it 'exists', ->
+      expect(Cord).to.be.ok()
+      expect(Cord).to.be.a 'function'
+   
+   describe '(aping a String)', ->
+      
+      it 'exposes toString()', ->
+         cord = new Cord 'foo'
+         expect(   cord).to.have.property 'toString'
+         expect(-> cord.toString()).to.not.throwError
+         expect(   cord.toString()).to.be.a 'string'
+      
+      it "toString()'s to a plain String, by default", ->
+         c = new Cord 'foo'
+         expect(c.toString()).to.be 'foo'
