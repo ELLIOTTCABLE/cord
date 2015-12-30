@@ -70,3 +70,11 @@ to solve with cord. I believe it achieves these goals wonderfully! ^_^
   [basic]: http://github.com/elliottcable/cord/raw/Master/examples/basic.png
   [nested]: http://github.com/elliottcable/cord/raw/Master/examples/nested.png
   [complex]: http://github.com/elliottcable/cord/raw/Master/examples/complex.png
+
+License
+-------
+This project is released for public usage under the terms of the very-permissive [ISC license][] (a
+modern evolution of the MIT / BSD licenses); more information is available in [COPYING][].
+
+   [ISC license]: <http://choosealicense.com/licenses/isc/> "Information about the ISC license"
+   [COPYING]: <./COPYING.text>
